@@ -1,0 +1,61 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, PHP, Ruby, 
+C#, VB, Perl, Swift, Prolog, Javascript, Pascal, HTML, CSS, JS
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+#include <stdio.h>
+struct date{
+	int day,month,year;
+}d1;
+struct data{
+	int d,m,y;
+}d2;
+int main()
+
+{   int t=1;
+    int f=0,a[13]={0,31,28,31,30,31,30,31,31,30,31,30,31};
+	struct date d1;
+	struct data d2;
+	while(t)
+	{
+	printf("Enter date: \n");
+	scanf("%d", &d2.d);
+	printf("Enter month: \n");
+	scanf("%d", &d2.m);
+	printf("Enter year: \n");
+	scanf("%d", &d2.y);
+	d1.day=d2.d;
+	d1.month=d2.m;
+	d1.year=d2.y;
+	
+	if(d1.month< 1||d1.month>12)
+	{
+	f++;
+	}
+	if(d1.year%4==0)
+	a[1]= 29;
+	if(d1.day>a[d1.month])
+	{
+	    f++;
+    }
+
+	
+	if(f==0)
+	{
+	    printf("The date is: \n");
+	    printf("%d-%d-%d\n",d1.day,d1.month,d1.year);
+	}
+	
+	else
+	printf("Invalid date\n");
+
+   printf("If you wish to terminate the program press 0 otherwise press any number\n");
+   scanf("%d",&t);
+}
+	
+	return 0;
+	
+}
